@@ -1,3 +1,7 @@
+= C++ example project scanned on SonarQube using AutoConfig
+
+WIP
+
 = Code Description
 
 An example of a flawed C++ code. The https://github.com/sonarsource-cfamily-examples/code[code repository] can be https://github.com/sonarsource-cfamily-examples/automatic-analysis-sc[analyzed automatically], but it can also be compiled with different build systems using different CI pipelines on Linux, macOS, and Windows.
