@@ -7,13 +7,14 @@ on:
 jobs:
   build:
     name: Analyze
-    runs-on: sonarsource/sonar-scanner-cli:11.0.0.1541_6.1.0
+    runs-on: ubuntu-latest
+    container: sonarsource/sonar-scanner-cli:11.0.0.1541_6.1.0
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: Scan
-        run: >
+        run: |
           sonar-scanner
         env:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # SonarQube URL is stored in a GitHub secret
