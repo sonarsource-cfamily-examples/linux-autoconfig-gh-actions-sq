@@ -8,13 +8,17 @@ jobs:
   build:
     name: Analyze
     runs-on: ubuntu-latest
-    container: sonarsource/sonar-scanner-cli:11.0.0.1541_6.1.0
+    container: ubuntu:22.04
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: Scan
         run: |
+          mkdir $HOME/.sonar
+          curl -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-6.1.0.4477-linux-x64.zip
+          unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
+          export PATH=$HOME/.sonar/sonar-scanner-6.1.0.4477-linux-x64/bin:$PATH
           sonar-scanner
         env:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # SonarQube URL is stored in a GitHub secret
