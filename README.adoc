@@ -1,6 +1,34 @@
 = C++ example project scanned on SonarQube using AutoConfig
 
-WIP
+:uri-qg-status: https://next.sonarqube.com/sonarqube/dashboard?id=sonarsource-cfamily-examples_linux-autoconfig-gh-actions-sq_409eae14-979c-4758-b5fb-8513b12efb8c
+:img-qg-status: https://next.sonarqube.com/sonarqube/api/project_badges/measure?project=sonarsource-cfamily-examples_linux-autoconfig-gh-actions-sq_409eae14-979c-4758-b5fb-8513b12efb8c&metric=alert_status&token=sqb_f0094f1a85d801462c2cdea480dad9f11958385b
+:uri-build-status: https://github.com/sonarsource-cfamily-examples/linux-autoconfig-gh-actions-sq/actions/workflows/build.yml
+:img-build-status: https://github.com/sonarsource-cfamily-examples/linux-autoconfig-gh-actions-sq/actions/workflows/build.yml/badge.svg
+
+
+image:{img-build-status}[Build Status, link={uri-build-status}]
+image:{img-qg-status}[Quality Gate Status,link={uri-qg-status}]
+
+*This project is analysed on https://next.sonarqube.com/sonarqube/dashboard?id=sonarsource-cfamily-examples_linux-autoconfig-gh-actions-sq_409eae14-979c-4758-b5fb-8513b12efb8c[SonarQube]!*
+
+
+It is very easy to analyze a C, C++ and Objective-C project with SonarQube using AutoConfig:
+
+
+. Create a `sonar-project.properties` file to store your configuration
+. In your `.github/workflows/build.yml` file:
+.. Set the environment variable `SONAR_HOST_URL` to your server url (e.g.: https://example.com:9000)
+.. Analyze your code using https://github.com/SonarSource/sonarqube-scan-action[the SonarQube Scan Github Action]
+. Ensure that your token is stored as a secret in your repository (`SONARQUBE_TOKEN` in this example project). If you don't have a token yet, you can generate a new one in SonarQube (see https://docs.sonarqube.org/latest/user-guide/user-token/[Generating and Using Tokens]).
+
+
+You can take a look at the link:sonar-project.properties[sonar-project.properties] and link:.github/workflows/build.yml[build.yml] to see it in practice.
+
+= Documentation
+
+- https://docs.sonarqube.org/latest/analysis/languages/cfamily/[Documentation overview of the C, C++ and Objective-C analyzer]
+- https://docs.sonarqube.org/latest/analysis/github-integration/[GitHub Integration in SonarQube]
+- https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/languages/c-family/customizing-the-analysis/#autoconfig-specific-properties[Tuning CFamily AutoConfig analysis]
 
 = Code Description
 
