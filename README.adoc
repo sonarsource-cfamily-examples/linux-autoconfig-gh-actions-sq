@@ -28,8 +28,7 @@ You can take a look at the link:sonar-project.properties[sonar-project.propertie
 
 - https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/languages/c-family/overview/[C/C++/Objective-C analysis overview]
 - https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/[GitHub Integration]
-- https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/languages/c-family/prerequisites/#generating-a-compilation-database[Generating a compilation database]
-- https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/languages/c-family/running-the-analysis/[Running the CFamily analysis]
+- https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/languages/c-family/customizing-the-analysis/#autoconfig-specific-properties[AutoConfig-specific properties]
 
 = Code Description
 
